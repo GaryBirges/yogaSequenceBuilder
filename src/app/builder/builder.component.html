@@ -3,7 +3,7 @@
     <ul [(dragulaModel)]="images" [dragula]="'originals'" id="orig">
       <li *ngFor="let image of images;  index as i">
         <div class="imageContainer">
-          <p>{{i}}</p>
+          <p>{{image.name}}</p>
         </div>
       </li>
     </ul>
@@ -14,11 +14,11 @@
       <input type="text" #sequenceName>
       <button (click)="save(sequenceName.value)">Save</button>
     </div>
-    <div class="rowOfSequence" *ngFor="let row of rows;">
-        <ul  [(dragulaModel)]="sequence" [dragula]="'originals'" id="seq">
-            <li *ngFor="let image of sequence;  ">
+    <div class="rowOfSequence" *ngFor="let row of rows; index as i">
+        <ul  [(dragulaModel)]=" rows[i].sequence" [dragula]="'originals'" id="seq">
+            <li *ngFor="let image of rows[i].sequence;  ">
                 <div class="imageContainer">
-                  <p>{{i}}</p>
+                  <p>{{image.name}}</p>
                 </div>
               </li>
         </ul>
