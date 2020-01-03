@@ -1,0 +1,47 @@
+.buildHolder{
+  height:100%;
+  width:100%;
+  background-color: azure;
+  display:block;
+}
+.selector{
+  width:340px;
+  height:100%;
+  background-color: bisque;
+  float:left;
+  overflow-y:scroll;
+}
+.sequence{
+  /* height:300px; */
+  width:calc(100% - 340px);
+  background-color: aquamarine;
+  float:right;
+}
+.rowOfSequence{
+  height:300px;
+}
+.rowOfSequence ul{
+  height:300px;
+  /* display:inline-block; */
+  list-style-type: none;
+}
+.rowOfSequence ul li{
+  float:left;
+}
+.selector ul{
+  list-style-type: none;
+  padding-left:0px;
+}
+.imageContainer{
+  width:300px;
+  height:240px;
+  line-height:240px;
+  background-color: brown;
+  margin:10px;
+  text-align: center;
+  vertical-align: middle;
+}
+.imageContainer p{
+  font-size: 50px;
+  margin:10px;
+}

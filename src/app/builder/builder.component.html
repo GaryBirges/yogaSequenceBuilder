@@ -1,0 +1,19 @@
+<div class="buildHolder">
+  <div class="selector">
+    <ul [(dragulaModel)]="vampires" [dragula]="'originals'" id="orig">
+      <li *ngFor="let image of images;  index as i">
+        <div class="imageContainer">
+          <p>{{i}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sequence">
+    <div class="rowOfSequence">
+        <ul  [(dragulaModel)]="vampires" [dragula]="'originals'" id="seq">
+
+          </ul>
+    </div>
+  </div>
+</div>
