@@ -1,6 +1,6 @@
 <div class="buildHolder">
   <div class="selector">
-    <ul [(dragulaModel)]="vampires" [dragula]="'originals'" id="orig">
+    <ul [(dragulaModel)]="images" [dragula]="'originals'" id="orig">
       <li *ngFor="let image of images;  index as i">
         <div class="imageContainer">
           <p>{{i}}</p>
@@ -8,12 +8,20 @@
       </li>
     </ul>
   </div>
-
   <div class="sequence">
-    <div class="rowOfSequence">
-        <ul  [(dragulaModel)]="vampires" [dragula]="'originals'" id="seq">
-
-          </ul>
+    <div class="controlPanel">
+      <button (click)="addRow()">add Row</button>
+      <input type="text" #sequenceName>
+      <button (click)="save(sequenceName.value)">Save</button>
+    </div>
+    <div class="rowOfSequence" *ngFor="let row of rows;">
+        <ul  [(dragulaModel)]="sequence" [dragula]="'originals'" id="seq">
+            <li *ngFor="let image of sequence;  ">
+                <div class="imageContainer">
+                  <p>{{i}}</p>
+                </div>
+              </li>
+        </ul>
     </div>
   </div>
 </div>

@@ -10,23 +10,26 @@
   background-color: bisque;
   float:left;
   overflow-y:scroll;
+  position: fixed;
 }
 .sequence{
-  /* height:300px; */
   width:calc(100% - 340px);
-  background-color: aquamarine;
   float:right;
 }
 .rowOfSequence{
-  height:300px;
+  min-height:300px;
+  margin-bottom: 10px;
+  background-color: aquamarine;
+  overflow-x: hidden;
 }
 .rowOfSequence ul{
   height:300px;
-  /* display:inline-block; */
   list-style-type: none;
+  padding-left:0px;
 }
 .rowOfSequence ul li{
   float:left;
+  padding-bottom:20px;
 }
 .selector ul{
   list-style-type: none;
